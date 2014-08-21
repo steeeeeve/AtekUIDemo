@@ -16,7 +16,7 @@
     "roles": {},
     "wait-on-lib": {},
     "custom-framework": {
-      "git": $MYGITHUBURL
+      "git": MYGITHUBURL
     },
     "kadira": {}
   }
