@@ -1,0 +1,82 @@
+<template name="Provisioning">
+	<div class = "container-fluid"><div class = "provisioning">
+		<form class="form-horizontal" role="form">
+			<div class="row">
+				<div class="col-lg-6"><form class="form-horizontal">
+				 	<div class="form-group">
+						<label for="newTankName" class="col-sm-2 control-label">Tank Name</label>
+						<div class="col-sm-10">
+					    	<input type="name" class="input-large" id="newTankName">
+					    </div>
+					</div>
+					<div class="form-group">
+					    <label for="newTankType" class="col-sm-2 control-label">Type</label>
+					    <div class="col-sm-10">
+						    <select>
+								<option>Rectangle</option>
+								<option>Cylinder</option>
+								<option>Square</option>
+								<option>Other</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="newManufacture" class="col-sm-2 control-label">Manufacture</label>
+						<div class="col-sm-10">
+					    	<input type="name" class="input-large" id="newManufacture">
+					    </div>
+					</div>
+				</form></div>
+
+				<div class="col-lg-6"><form class="form-horizontal">
+					<div class="form-group">
+					    <label for="newTankLocation" class="col-sm-2 control-label">Location</label>
+					    <div class="col-sm-10">
+					    	<input type="name" class="input-large" id="newTankLocation">
+					    </div>
+					</div>
+
+					<div class="form-group">
+					    <label for="newTankInstallDate" class="col-sm-2 control-label">Install Date</label>
+					    <div class="col-sm-10">
+					    	<input type="name" class="input-large" id="newTankInstallDate">
+					    </div>
+					</div>
+	    		</form></div>
+			</div>
+
+			<div class="row">
+	    		<div class="col-lg-6"><form class="form-horizontal">
+	    			<div class="form-group">
+	    				<label for="newNotes" class="col-sm-2 control-label">Notes</label>
+	    				<div class="col-sm-10">
+		    				<textarea class="form-control" rows="3"></textarea>
+		    			</div>
+	    			</div>
+					<div class="form-group">
+					    <label for="newTankKey" class="col-sm-2 control-label">Key</label>
+					    <div class="col-sm-10">
+					    	<input type="name" class="form-control" id="newTankKey">
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="newReportingInterval" class="col-sm-2 control-label">Reporting Interval</label>
+					    <div class="col-sm-10">
+					    	<input type="name" class="input-large" id="newReportingInterval">
+						</div>
+					</div>
+				</form></div>
+			</div>
+
+    		<div class="col-lg-8 col-lg-offset-6">
+    			<div class="form-group">
+	    			<div class="col-sm-offset-2 col-sm-10">
+	    				<button type="submit" class="btn btn-primary">Validate</button>
+	    				<button type="submit" class="btn btn-primary">Submit</button>
+	    			</div>
+	    		</div>
+    		</div>
+
+		</form>
+	</div></div>
+</template>

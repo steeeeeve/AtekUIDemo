@@ -1,0 +1,43 @@
+<template name="CreateUser">
+	<div class="col-xs-6">
+	<form class="form-horizontal">
+		<div class="form-group">
+			<input type="text" class="form-control" id="CreateUserName" placeholder="User Name">
+		</div>
+		<div class="form-group">
+			<input type="text" class="form-control" id="CreatePassword" placeholder="Password">
+		</div>
+		<div class="form-group">
+			<div class="input-group">
+			<div class="input-group-addon">@</div>
+			<input type="email" class="form-control" id="CreateEmail" placeholder="Email">
+			</div>
+		</div>
+		<div class="form-group">
+			<select style="color: #2b3e50">
+				{{#each CreateUserOptions}}}}
+					<option style="color: #2b3e50" value="{{name}}">{{name}}</option>
+				{{/each}}
+			</select>
+		</div>
+
+		<hr/>
+
+		<div class="form-group">
+			<input type="text" class="form-control" id="CreateFirstName" placeholder="First Name">
+		</div>
+		<div class="form-group">
+			<input type="text" class="form-control" id="CreateLastName" placeholder="Last Name">
+		</div>
+		<div class="form-group">
+			<input type="text" class="form-control" id="CreateMobilePhone" placeholder="Mobile Phone">
+			<label>
+				<input type="checkbox" value="">
+				Send Primary Email in SMS format
+			</label>
+		</div>
+
+		<input type="submit" id="SubmitUser" value="Create User">
+	</form>
+	</div>
+</template>

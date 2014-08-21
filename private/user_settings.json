@@ -1,0 +1,44 @@
+{
+	"device_cloud" : {
+		"watchdog_timeout" : 300,
+		"initial_history_days" : 1,
+		"accounts" : [
+			{
+				"name"	   : "ATEK Account",
+	 			"server"   : "my.idigi.com",
+				"username" : "ATEK_TSM",
+				"password" : "TSM_r0cks",
+				"monitor" : {
+					"monTopic" : "DeviceCore,DataStream,DataPoint",
+					"monTransportType" : "tcp",
+					"monFormatType" : "json",
+					"monBatchSize" : 1000,
+					"monCompression" : "zlib",
+					"monBatchDuration" : 30,
+					"monDescription" : "Meteor - steve-demo3",
+					"monAutoReplayOnConnect" : false,
+					"monAckOption" : "explicit"
+				}
+			},
+			{
+				"name"	   : "Scott Private Account",
+	 			"server"   : "my.idigi.com",
+				"username" : "scotttest",
+				"password" : "scotttest!",
+				"monitor" : {
+					"monTopic" : "DeviceCore,DataStream,DataPoint",
+					"monTransportType" : "tcp",
+					"monFormatType" : "json",
+					"monBatchSize" : 1000,
+					"monCompression" : "zlib",
+					"monBatchDuration" : 30,
+					"monDescription" : "Meteor - steve-demo3",
+					"monAutoReplayOnConnect" : false,
+					"monAckOption" : "explicit"
+				}
+			}
+		]
+	},
+	"file_handlers" : "",
+	"channel_maps" : ""
+}

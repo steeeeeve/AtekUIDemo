@@ -1,0 +1,324 @@
+{
+	"users" : [ {
+		"username" : "scottk", 
+		"password" : "abc123",
+		"email"    : "scottk@digi.com"
+	},{
+		"username" : "stevej",
+		"password" : "abc123",
+		"email" : "sjin@etherios.com",
+		"roles" : ["admin"]
+	}],
+	"customers" : [ {
+		"info" : {
+			"name" : "Digi International",
+			"address1" : "11001 Bren Road East",
+			"city" : "Minnetonka",
+			"state" : "Minnesota",
+			"country" : "United States",
+			"postal" : "55343",
+			"main_contact" : {
+				"first_name" : "Scott",
+				"last_name" : "Kilau",
+				"emails" : [ "scottk@digi.com" ]
+			}
+		},
+		"description" : "Acme Company",
+		"sites" : [
+			{
+				"info" : {
+					"name" : "Worldwide Headquarters",
+					"address1" : "11001 Bren Road East",
+					"city" : "Minnetonka",
+					"state" : "Minnesota",
+					"country" : "United States",
+					"postal" : "55343",
+					"main_contact" : {
+						"first_name" : "Scott",
+						"last_name" : "Kilau",
+						"emails" : [ "scottk@digi.com" ]
+					}
+				},
+				"description" : "Digi International Worldwide Headquarters",
+				"gateways" : [
+					{
+						"name" : "Bin #1 Gateway",
+						"description" : "Bin #1 Gateway",
+						"devConnectwareId" : "00000000-00000000-00409DFF-FF722DF5",
+						"cloudServer" : "my.idigi.com",
+						"cloudUser" : "ATEK_TSM",
+						"devices" : [
+							{
+								"name" : "1024060552-0007209",
+								"description" : "Bin #1 Device #1"
+							},
+							{
+								"name" : "1024060552-0007259",
+								"description" : "Bin #1 Device #2"
+							},
+							{
+								"name" : "1024060552-0007265",
+								"description" : "Bin #1 Device #3"
+							},
+							{
+								"name" : "1024060552-0007267",
+								"description" : "Bin #1 Device #4"
+							},
+							{
+								"name" : "1024060552-0007275",
+								"description" : "Bin #1 Device #5"
+							},
+							{
+								"name" : "1024060552-0007276",
+								"description" : "Bin #1 Device #6"
+							},
+							{
+								"name" : "1024060552-0007278",
+								"description" : "Bin #1 Device #7"
+							},
+							{
+								"name" : "1024060552-0007285",
+								"description" : "Bin #1 Device #8"
+							},
+							{
+								"name" : "1024060552-0007257",
+								"description" : "Bin #1 Device #9"
+							},
+							{
+								"name" : "1024060552-0007299",
+								"description" : "Bin #1 Device #10"
+							},
+							{
+								"name" : "1024060552-0007300",
+								"description" : "Bin #1 Device #11"
+							},
+							{
+								"name" : "1024060552-0007301",
+								"description" : "Bin #1 Device #12"
+							},
+							{
+								"name" : "1024060552-0007302",
+								"description" : "Bin #1 Device #13"
+							},
+							{
+								"name" : "1024060552-0007308",
+								"description" : "Bin #1 Device #14"
+							},
+							{
+								"name" : "1024060552-0007315",
+								"description" : "Bin #1 Device #15"
+							},
+							{
+								"name" : "1024060552-0007317",
+								"description" : "Bin #1 Device #16"
+							},
+							{
+								"name" : "1024060552-0007325",
+								"description" : "Bin #1 Device #17"
+							},
+							{
+								"name" : "1024060552-0007330",
+								"description" : "Bin #1 Device #18"
+							},
+							{
+								"name" : "1024060552-0007331",
+								"description" : "Bin #1 Device #19"
+							},
+							{
+								"name" : "1024060552-0007332",
+								"description" : "Bin #1 Device #20"
+							},
+							{
+								"name" : "1024060552-0007334",
+								"description" : "Bin #1 Device #21"
+							},
+							{
+								"name" : "1024060552-0007335",
+								"description" : "Bin #1 Device #22"
+							},
+							{
+								"name" : "1024060552-0007336",
+								"description" : "Bin #1 Device #23"
+							},
+							{
+								"name" : "1024060552-0007338",
+								"description" : "Bin #1 Device #24"
+							},
+							{
+								"name" : "1024060552-0007343",
+								"description" : "Bin #1 Device #25"
+							},
+							{
+								"name" : "1024060552-0007345",
+								"description" : "Bin #1 Device #26"
+							},
+							{
+								"name" : "1024060552-0007346",
+								"description" : "Bin #1 Device #27"
+							},
+							{
+								"name" : "1024060552-0007366",
+								"description" : "Bin #1 Device #28"
+							},
+							{
+								"name" : "1024060552-0007375",
+								"description" : "Bin #1 Device #29"
+							},
+							{
+								"name" : "1024060552-0007376",
+								"description" : "Bin #1 Device #30"
+							}
+						]
+					}
+				]
+			},
+			{
+				"info" : {
+					"name" : "Operations Facility",
+					"address1" : "10000 W 76th Street",
+					"city" : "Eden Prarie",
+					"state" : "Minnesota",
+					"country" : "United States",
+					"postal" : "55344",
+					"main_contact" : {
+						"first_name" : "Scott",
+						"last_name" : "Kilau",
+						"emails" : [ "scottk@digi.com" ]
+					}
+				},
+				"description" : "Digi Operations Facility",
+				"gateways" : [
+					{
+						"name" : "Bin #2 Gateway",
+						"description" : "Bin #2 Gateway",
+						"devConnectwareId" : "00000000-00000000-00409DFF-FF564606",
+						"cloudServer" : "my.idigi.com",
+						"cloudUser" : "ATEK_TSM",
+						"devices" : [
+							{
+								"name" : "0000048B",
+								"description" : "Bin #2 Device #1"
+							},
+							{
+								"name" : "0000048C",
+								"description" : "Bin #2 Device #2"
+							},
+							{
+								"name" : "000004AD",
+								"description" : "Bin #2 Device #3"
+							},
+							{
+								"name" : "000004AE",
+								"description" : "Bin #2 Device #4"
+							},
+							{
+								"name" : "000004AF",
+								"description" : "Bin #2 Device #5"
+							},
+							{
+								"name" : "000004B0",
+								"description" : "Bin #2 Device #6"
+							},
+							{
+								"name" : "000004B1",
+								"description" : "Bin #2 Device #7"
+							},
+							{
+								"name" : "000004B2",
+								"description" : "Bin #2 Device #8"
+							}
+						]
+					}
+				]
+			},
+			{
+				"info" : {
+					"name" : "Etherios Regional Office",
+					"address1" : "190 South LaSalle Street",
+					"address2" : "Suite 3010",
+					"city" : "Chicago",
+					"state" : "Illinois",
+					"country" : "United States",
+					"postal" : "60603",
+					"main_contact" : {
+						"first_name" : "Scott",
+						"last_name" : "Kilau",
+						"emails" : [ "scottk@digi.com" ]
+					}
+				},
+				"description" : "Etherios Regional Office",
+				"gateways" : [
+					{
+						"name" : "Bin #3 Gateway",
+						"description" : "Bin #3 Gateway",
+						"devConnectwareId" : "00000000-00000000-00409DFF-FF50ADA6",
+						"cloudServer" : "my.idigi.com",
+						"cloudUser" : "ATEK_TSM",
+						"devices" : [
+							{
+								"name" : "1024060597-0006506",
+								"description" : "Bin #3 Device #1"
+							}
+						]
+					}
+				]
+			},
+			{
+				"info" : {
+					"name" : "Scott's Office",
+					"address1" : "190 South LaSalle Street",
+					"address2" : "Suite 3010",
+					"city" : "Chicago",
+					"state" : "Illinois",
+					"country" : "United States",
+					"postal" : "60603",
+					"main_contact" : {
+						"first_name" : "Scott",
+						"last_name" : "Kilau",
+						"emails" : [ "scottk@digi.com" ]
+					}
+				},
+				"description" : "Scott's Office",
+				"gateways" : [
+					{
+						"name" : "Scott's Bin #1 Gateway",
+						"description" : "Scott's Bin #1 Gateway",
+						"devConnectwareId" : "00000000-00000000-00409DFF-FF298D4A",
+						"cloudServer" : "my.idigi.com",
+						"cloudUser" : "scotttest",
+						"devices" : [
+							{
+								"name" : "ATEK_Tank_1",
+								"description" : "Demo Atek Tank #1"
+							},
+							{
+								"name" : "Stock_Ticker_DGII",
+								"description" : "Stock Ticker #1"
+							}
+						]
+					}
+				]
+			}
+		],
+
+		"gatewayEventFactories" : [ { 
+			"name" : "Connection Status Filter",
+			"type" : "GatewayEventFilterConnectionStatusFactory",
+			"gateway_filters" : [
+				{ "filter" : "*" }
+				],
+			"notifications" : {
+				"console" : "",
+				"alarm" : "",
+				"email" : [
+					{ "address" : "" },
+					{ "address" : "" }
+				],
+				"sms" : [
+					{ "number" : "" },
+					{ "number" : "" }
+				]
+			}
+		} ]
+        } ]
+}

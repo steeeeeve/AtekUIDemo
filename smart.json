@@ -1,0 +1,23 @@
+{
+  "packages": {
+    "collection2": {},
+    "autoform": {},
+    "iron-router": {},
+    "bootstrap-3": {},
+    "xml2js": {},
+    "highcharts": {},
+    "moment": {},
+    "aws-sdk": {},
+    "jquery-datatables": {},
+    "less-bootstrap-3": {},
+    "font-awesome-4-less": {},
+    "spin": {},
+    "iron-router-progress": {},
+    "roles": {},
+    "wait-on-lib": {},
+    "custom-framework": {
+      "git": "https://github.com/dgii/meteor_custom_framework.git"
+    },
+    "kadira": {}
+  }
+}

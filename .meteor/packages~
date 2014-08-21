@@ -1,0 +1,23 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+standard-app-packages
+autopublish
+insecure
+accounts-base
+custom-framework
+spin
+blaze-layout
+collection2
+autoform
+iron-router
+migrations
+bootstrap-3
+accounts-ui-bootstrap-3
+xml2js
+highcharts
+luma-component
+blocking
+jquery-datatables

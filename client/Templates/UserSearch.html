@@ -1,0 +1,50 @@
+<template name="UserSearch">
+	<div class="row">
+		<div class="col-md-4">
+			<form role="form" class="form-horizontal">
+				<div class="form-group">
+				<table  style="width: 67%; margin: 0 auto 2em auto;" border="0" cellpadding="3" cellspacing="0">
+			        <tbody>
+			            <tr id="filter_col0" data-column="1">
+			                <td>First Name</td>
+			                <td align="center"><input class="column_filter" id="col1_filter" type="text"></td>
+			            </tr>
+			            <tr id="filter_col1" data-column="2">
+			                <td>Last Name</td>
+			                <td align="center"><input class="column_filter" id="col2_filter" type="text"></td>
+			            </tr>
+			            <tr id="filter_col2" data-column="4">
+			                <td>Company Name</td>
+			                <td align="center"><input class="column_filter" id="col4_filter" type="text"></td>
+			            </tr>
+
+			        </tbody>
+			    </table>	
+			    </div>
+			</form>
+		</div>
+	</div>
+		<table id="UserSearchTable" class="table  tabled-bordered table-condensed">
+		<thead>
+			<tr>
+				<th>User Name</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+				<th>Company</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each Users}}
+				<tr data-name="{{info.name}}" data-id="{{_id}}" class="UserRow">
+					<td>{{username}}</td>
+					<td>{{firstName}}</td>
+					<td>{{lastName}}</td>
+					<td>{{email}}</td>
+					<td>{{companyName}}</td>
+				</tr>
+			{{/each}}
+		</tbody>
+		</table>
+
+</template>

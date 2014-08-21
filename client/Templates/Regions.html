@@ -1,0 +1,23 @@
+<template name="Regions">
+    <div class="container-fluid">
+        <!--  to move sensors: style="margin-top : -28px;" -->
+        <legend>
+            <h3>Regions</h3>
+        </legend>
+        <table id="RegionTable" class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Site Id</th>
+                    <th>Site Name</th>
+                    <th>Description</th>
+                    <th>Customer Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each ItemList}}
+                    {{> Item}}
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</template>

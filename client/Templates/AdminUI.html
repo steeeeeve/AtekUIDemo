@@ -1,0 +1,176 @@
+<template name="AdminUI">
+	<h3>Gateway Provisioning</h3>
+	<div class="row">
+		<div class="col-md-4">
+			<table id="adminCustomerTable" class="table  tabled-bordered table-condensed">
+			<thead>
+				<tr>
+					<th>Customer Name</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each Customers}}
+					<tr data-name="{{info.name}}" data-id="{{_id}}" class="CustomerRow">
+						<td>{{info.name}}</td>
+					</tr>
+				{{/each}}
+			</tbody>
+			</table>
+		</div>
+		<div class="col-md-4">
+			<table id="adminSitesTable" class="table  tabled-bordered table-condensed">
+			<thead>
+				<tr>
+					<th>Customer Site</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each GatewayProvisionSites}}
+					<tr data-name="{{info.name}}" data-id="{{_id}}" class="SiteRow">
+						<td>{{info.name}}</td>
+					</tr>
+				{{/each}}
+			</tbody>
+			</table>
+		</div>
+		<div class="col-md-4">
+			<button type="button" class="btn btn-primary" id="openGateways">Open Gateways </button>
+		    <button type="button" class="btn btn-primary" id="allGateways">All Gateways </button>
+			<table id="adminGatewayTable" class="table tabled-bordered table-condensed">
+				<thead>
+					<tr>
+						<th>Gateway Name</th>
+						<th>Gateway Connectware Id</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each Gateways}}
+					<tr data-id="{{devConnectwareId}}" class="GatewayRow">
+						<td>{{name}}</td>
+						<td>{{devConnectwareId}}</td>
+					</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</div>
+	</div>
+	
+	
+	<form class="form-horizontal">
+		<label for="gatewayInput">Gateway to be added to Customer: {{SelectedCustomer}} and Site : {{SelectedSite}}</label><br/>
+		<input id="gatewayInput" class="col-sm-4">
+		<input type="submit" id="SubmitGateway" value="Enter">
+	</form>
+	<br/>	
+    
+	<hr/>
+
+
+
+
+	<h3>Sites Provisioning</h3>
+	<div class="row">
+		<div class="col-md-4">
+			<p>Site From</p>
+			<table id="adminSitesProvisioningFrom" class="table tabled-bordered table-condensed">
+			<thead>
+				<tr>
+					<th>Customer Site</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each Sites}}
+					<tr data-name="{{info.name}}" data-id="{{_id}}" class="SiteProvisioningSiteFromRow">
+						<td>{{info.name}}</td>
+					</tr>
+				{{/each}}
+			</tbody>
+			</table>		
+		</div>
+		<div class="col-md-4">
+			<p>Site From Devices </p>
+			<table id="adminSitesProvisioningDevices" class="table tabled-bordered table-condensed">
+			<thead>
+				<tr>
+					<th>Device Name</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each SiteProvisionDevices}}
+					<tr data-name="{{name}}" data-id="{{_id}}" class="SiteProvisioningDeviceRow">
+						<td>{{name}}</td>
+					</tr>
+				{{/each}}
+			</tbody>
+			</table>	
+			<input type="submit" id="TransferDevice">	
+		</div>
+		<div class="col-md-4">
+			<p>Site To</p>
+			<table id="adminSitesProvisioningTo" class="table tabled-bordered table-condensed">
+			<thead>
+				<tr>
+					<th>Customer Site</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each Sites}}
+					<tr data-name="{{info.name}}" data-id="{{_id}}" class="SiteProvisioningSiteToRow">
+						<td>{{info.name}}</td>
+					</tr>
+				{{/each}}
+			</tbody>
+			</table>		
+		</div>
+	</div>
+
+	<hr/>
+
+
+
+
+
+
+	<h3>Tank Metadata</h3>
+
+	<div class="row">
+		<div class="col-md-4">
+			<table id="adminTankProvisioningSites" class="table tabled-bordered table-condensed">
+			<thead>
+				<tr>
+					<th>Customer Site</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each Sites}}
+					<tr data-name="{{info.name}}" data-id="{{_id}}" class="TankProvisioningSiteRow">
+						<td>{{info.name}}</td>
+					</tr>
+				{{/each}}
+			</tbody>
+			</table>		
+		</div>
+		<div class="col-md-4">
+			<table id="adminTankProvisioningDevices" class="table tabled-bordered table-condensed">
+			<thead>
+				<tr>
+					<th>Device Name</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each TankProvisionDevices}}
+					<tr data-name="{{name}}" data-id="{{_id}}" class="TankProvisioningDeviceRow">
+						<td>{{name}}</td>
+					</tr>
+				{{/each}}
+			</tbody>
+			</table>	
+		</div>	
+		<div class="col-md-4">
+			{{#if TankProvisionChosen}}
+			<textarea class="form-control" rows="3"></textarea>
+			{{/if}}
+			<input type="submit" id="SubmitTankMetadata" value="Submit">
+		</div>
+	</div>
+</template>

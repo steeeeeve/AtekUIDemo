@@ -1,0 +1,53 @@
+<template name="Detail">
+
+    {{#if Rendered}}
+    {{#with RowDetail}}
+
+    <div id="Details" >
+        <legend><h3>{{info.name}}</h3></legend>
+
+        <div class='float-btn-right'>
+            <form class="form-horizontal">
+                <!-- Button -->
+                <button class="btn btn-primary" id="submit">Find me</button>
+            </form>
+        </div>
+
+        <div class="detail-text">
+            Description : {{description}}<br/>
+            Devices : {{devicesCount}}
+        </div>
+
+            <div>
+                <table id="DeviceTable" class="table table-bordered table-striped table-hover" data-toggle="modal" data-id="{{_id}}" data-target="ItemDetailModal">
+                    <thead>
+                    <tr>
+                        <th>Status</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{#each Devices}}
+                    {{> DeviceDetails}}
+                    {{/each}}
+                    </tbody>
+                </table>
+
+            </div><br/>
+            <br/>
+
+    </div>
+    {{/with}}
+    {{/if}}
+</template>
+
+
+<template name="DeviceDetails">
+    <tr data-toggle="modal" data-id="{{_id}}" data-target="ItemDetailModal" class="DeviceRow">
+        <td><span class={{statusicon}}></span></td>
+        <td>{{name}}</td>
+        <td>{{description}}</td>
+    </tr>
+    <br/>
+</template> 

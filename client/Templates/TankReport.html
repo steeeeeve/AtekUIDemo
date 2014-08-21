@@ -1,0 +1,43 @@
+<template name="TankReport">
+    <div class="container-fluid"><div class = "tankReport-padding">
+        {{#if Rendered}}
+        <div id="reportOptions">
+            <button type="button"  class="btn btn-primary" id="hourReport">Hour  </button>
+            <button type="button"  class="btn btn-primary" id="dayReport">Day  </button>
+            <button type="button" class="btn btn-primary" id="weekReport">Week  </button>
+            <button type="button" class="btn btn-primary" id="monthReport">Month  </button>
+            <button type="button" class="btn btn-primary" id="yearReport">Year  </button>
+        </div>
+        {{/if}}
+        <div id="reportContainer" style="width:900px;"></div>
+        <div id="channelTableDiv">
+            {{> AlertDescription}}
+            <h2>Channels : {{ChannelCount}}</h2>
+            <table id="channelTable" class="table table-bordered table-striped table-hover" >
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Value</th>
+                    <th>Units</th>
+                    <th>Last Updated Time</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each ChannelList}}
+                    {{> ChannelDetail}}
+                {{/each}}
+                </tbody>
+            </table>
+
+        </div>
+    </div></div>
+</template>
+
+<template name="ChannelDetail">
+    <tr>
+        <td>{{channelName}}</td>
+        <td>{{data}}</td>
+        <td>{{units}}</td>
+        <td>{{Timestamp}}</td>
+    </tr>
+</template>

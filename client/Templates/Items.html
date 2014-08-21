@@ -1,0 +1,45 @@
+<template name="Items">
+
+    <!-- CSS imports for yadcf -->
+    <!--
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="jquery.datatables.yadcf.css" rel="stylesheet" type="text/css" />
+    -->
+
+    <div class="container-fluid">
+        <div id="Sensors">
+        <!--  to move sensors: style="margin-top : -28px;" -->
+        <legend>
+            <h3>Sites</h3>
+        </legend>
+        <table id="ItemTable" class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr role="row">
+                    <th class="site-th">Site Id</th>
+
+                    <th>Site Name</th>
+
+                    <th>Description</th>
+
+                    <th>Customer Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each ItemList}}
+                    {{> Item}}
+                {{/each}}
+            </tbody>
+        </table>
+        </div>
+    </div>
+</template>
+
+<template name="Item">
+    <tr id="{{_id}}" data-id="{{_id}}" class="ItemRow">
+            <td>{{_id}}</td>
+            <td>{{info.name}}</td>
+            <td>{{description}}</td>
+            <td>{{customerName}}</td>
+    </tr>
+</template>

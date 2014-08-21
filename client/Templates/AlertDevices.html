@@ -1,0 +1,23 @@
+<template name="AlertDevices">
+	<div id="Details" >
+            <div>
+            	<legend><h3> Alert Devices </h3></legend>
+                <table id="AlertDeviceTable" class="table table-bordered table-striped table-hover" data-toggle="modal" data-id="{{_id}}" >
+                    <thead>
+                    <tr>
+                        <th>Status</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{#each AlertDevices}}
+                    {{> DeviceDetails}}
+                    {{/each}}
+                    </tbody>
+                </table>
+
+            </div><br/>
+
+    </div>
+</template>

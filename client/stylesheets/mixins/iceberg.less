@@ -1,0 +1,37 @@
+//@body-bg:               #ff0000;
+	@import "../variables.less";
+  //@import "../elements.less";
+	#gradient {
+
+		// Vertical gradient, from top to bottom
+		//
+		// Creates two color stops, start and end, by specifying a color and position for each color stop.
+		// Color stops are not available in IE9 and below.
+		.vertical(@start-color: #989ca0; @end-color: #234362; @start-percent: 0%; @end-percent: 100%) 
+		{
+			  background-image: -webkit-gradient(linear, left @start-percent, left @end-percent, from(@start-color), to(@end-color)); // Safari 4+, Chrome 2+
+			  background-image: -webkit-linear-gradient(top, @start-color @start-percent, @end-color @end-percent); // Safari 5.1+, Chrome 10+
+			  background-image:  -moz-linear-gradient(top, @start-color @start-percent, @end-color @end-percent); // FF 3.6+
+			  background-image: linear-gradient(to bottom, @start-color @start-percent, @end-color @end-percent); // Standard, IE10
+			  background-repeat: repeat-x;
+			  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@start-color),argb(@end-color))); // IE9 and down
+		}
+	}
+
+//** Background gradient **//
+body {
+    #gradient.vertical(#989ca0, #234362, 0%, 100%);	//goes from top to bottom
+    background-attachment: fixed;
+
+    //http://cssfontstack.com/ is a good reference for this
+	font-family: "Calibri", "Gill Sans MT", sans-serif;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+	.paginate_button {
+		color: #c7b99f;
+	}
+	.paginate_button:hover{
+		color: darken(@btn-primary-bg, 15%);
+	}
+}

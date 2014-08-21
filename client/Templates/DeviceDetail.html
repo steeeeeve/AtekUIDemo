@@ -1,0 +1,33 @@
+<template name="DeviceDetail">
+    {{#each DeviceQueried}}
+    <div  id="{{_id}}" data-id="{{_id}}" class="TankDetailsDiv tankdetail">
+       <h2>{{Name}}<br/></h2>
+        Status : {{Status}}<br/>
+        Type : {{Type}}<br/>
+        Last Report: {{LastReport}}<br/>
+
+        <table id="TankTable : {{_id}}" class="table table-borderedinvert table-stripedinvert table-hover" data-toggle="modal" data-id="{{_id}}" data-target="ItemDetailModal">
+            <thead>
+            <tr>
+                <th>Capacity</th>
+                <th>Battery</th>
+                <th>Full</th>
+                <th>Temperature</th>
+                <th>Time</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each TankTable}}
+            {{> TankDetails}}
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+    {{/each}}
+    <div id="ItemDetailModal" class="modal fade" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true" tabindex="-1">
+        <div class="modal-body">
+            {{> TankReport}}
+        </div>
+
+    </div>
+</template>

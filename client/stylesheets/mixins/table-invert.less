@@ -1,0 +1,20 @@
+.table-borderedinvert {
+	&:extend(.table);
+	border: 1px solid #2b3e50;
+
+	&:extend(.table-striped > tbody);
+	tr {
+		border-top: 2px solid #ff0000;
+		border: 2px solid #2b3e50;
+	}
+}
+
+.table-stripedinvert {
+	&:extend(.table-striped > tbody);
+		th {
+			background-color: #2b3e50;
+		}
+		tr:nth-child(even) {
+    		background-color: #2b3e50;   
+		}
+}
