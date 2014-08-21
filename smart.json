@@ -16,7 +16,7 @@
     "roles": {},
     "wait-on-lib": {},
     "custom-framework": {
-      "git": "https://github.com/dgii/meteor_custom_framework.git"
+      "git": $MYGITHUBURL
     },
     "kadira": {}
   }
