@@ -2,7 +2,7 @@
  * Server
  */
 CustomFramework = null;
-
+var security;
 /*
  * Defines some initial utility functions.
  *
@@ -89,6 +89,62 @@ Accounts.onCreateUser(function(options, user){
  * The initial Meteor Startup function.
  */
 Meteor.startup(function() {
+
+  // Initialize security service on first touch. To configure service pass in the following 
+  // configuration options:
+  // - the application roles
+  // - the organization templates
+  // - the root admin userId
+  var rootUserId;
+  var rootUser = Meteor.users.findOne({username:'root'});
+  if (rootUser == null) {
+    rootUserId = Accounts.createUser({username:'root', email:'root@digi.com', password:'root', profile: {name: 'The root user'}});
+  } else {
+    rootUserId = rootUser._id;
+  }
+  var securityConfig = {
+    roles: [
+      {
+        name: 'admin',
+        description: 'administer many aspects of the application',
+        permissions: ['MANAGE_USERS', 'MANAGE_ORGANIZATIONS', 'MANAGE_APPLICATION', 'MANAGE_DEVICES', 'READ_DEVICE_DATA', 'READ_DEVICE_CONFIG', 'WRITE_DEVICE_CONFIG'],
+      },
+      {
+        name: 'readOnly',
+        description: 'generally can only view devices and state',
+        permissions: ['READ_DEVICE_DATA', 'READ_DEVICE_CONFIG']
+      },
+      {
+        name: 'operator',
+        description: 'readOnly plus a few operator actions',
+        extendsRole: 'readOnly',
+        permissions: ['MANAGE_ALARMS']
+      },
+    ],
+    orgTemplates: [
+      {
+        orgType: 'customer',
+        orgTypeDescription: 'Top level customer'
+      },
+      {
+        orgType: 'region',
+        orgTypeDescription: 'Customers primary regions'
+      },
+      {
+        orgType: 'branch',
+        orgTypeDescription: 'Branches within each region'
+      },
+      {
+        orgType: 'site',
+        orgTypeDescription: 'Sites within a branch'
+      },
+
+    ],
+    rootUserId: rootUserId
+  }
+  security = new SecurityService(securityConfig);
+
+
 
 	console.log("Starting Meteor Server...");
 
@@ -207,5 +263,40 @@ Meteor.methods({
 	createableUserRoles: function(user) {
 		return [{name :'Customer Admin'},{name :'Customer'}];
 	},
-
+	createSecurityUser: function(user) {
+		createUser(user.role, user.username, user.email, user.password);
+	}
 });
+
+
+function createUser(role, username, email, password) {
+  var subUserId = Accounts.createUser({username: username, email:email, password:password, profile: {name: 'The '+role+' user'}});
+  security.assignUser(subUserId, [role], Organizations.findOne()._id, {username:username, email:email});
+  return subUserId;
+}
+
+function createSubOrgs(parentOrgId, subOrgNames) {
+  var rootOrg = security.getRootOrganization();
+  for (var i = subOrgNames.length - 1; i >= 0; i--) {
+    var newOrg = {
+      orgType: 0,
+      orgName: subOrgNames[i],
+      orgDescription: 'org for '+subOrgNames[i]
+    };
+    var newOrgId = security.createOrganization(parentOrgId, newOrg);
+    console.log(' created sub org for '+subOrgNames[i]+'. id='+newOrgId);
+    var fullOrg = Organizations.findOne({_id:newOrgId});
+    console.log('newOrg:'+EJSON.stringify(newOrg)+',   fullorg:'+EJSON.stringify(fullOrg));
+    // Create some devices for each sub organization - test org association helpers
+    for (var j = Math.floor(Math.random()*10); j >= 0; j--) {
+      var device = {
+        orgId: newOrgId,
+        orgPath: fullOrg.orgPath,
+        name: subOrgNames[i]+' pump'+j,
+        description: 'irrigation pump model XR'+Math.random()*500
+      };
+      var deviceId = Devices.insert(device);
+      console.log('inserting new device='+EJSON.stringify(device)+', deviceId='+deviceId);
+    };
+  }
+}

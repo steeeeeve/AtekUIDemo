@@ -16,8 +16,12 @@
     "roles": {},
     "wait-on-lib": {},
     "custom-framework": {
-      "git": $MYGITHUBURL
+      "git": "https://github.com/dgii/meteor_custom_framework.git"
     },
-    "kadira": {}
+    "kadira": {},
+    "security-service": {
+      "git": "https://93d92fb819fc8f3ac8f8ced8864aa0801a4141db:x-oauth-basic@github.com/dgii/meteor_security_service.git"
+    },
+    "bootstrap-daterangepicker": {}
   }
 }

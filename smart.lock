@@ -1,0 +1,179 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "collection2": {},
+      "autoform": {},
+      "iron-router": {},
+      "bootstrap-3": {},
+      "xml2js": {},
+      "highcharts": {},
+      "moment": {},
+      "aws-sdk": {},
+      "jquery-datatables": {},
+      "less-bootstrap-3": {},
+      "font-awesome-4-less": {},
+      "spin": {},
+      "iron-router-progress": {},
+      "roles": {},
+      "wait-on-lib": {},
+      "custom-framework": {
+        "git": "https://steeeeeve:foxtrot1@github.com/dgii/meteor_custom_framework.git",
+        "branch": "master"
+      },
+      "kadira": {},
+      "security-service": {
+        "git": "https://93d92fb819fc8f3ac8f8ced8864aa0801a4141db:x-oauth-basic@github.com/dgii/meteor_security_service.git",
+        "branch": "master"
+      },
+      "bootstrap-daterangepicker": {}
+    },
+    "packages": {
+      "collection2": {
+        "git": "https://github.com/aldeed/meteor-collection2.git",
+        "tag": "v0.4.6",
+        "commit": "80554182486be0d8e74f7ed02194a5649d712e27"
+      },
+      "autoform": {
+        "git": "https://github.com/aldeed/meteor-autoform.git",
+        "tag": "v0.17.1",
+        "commit": "a4688e7d77019a68ef43c2a303e905748beeb860"
+      },
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "tag": "v0.8.2",
+        "commit": "05415a8891ea87a00fb1e2388585f2ca5a38e0da"
+      },
+      "bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
+        "tag": "v3.2.0-1",
+        "commit": "17a63902fc6cf1096c5289d963c66cf28b474727"
+      },
+      "xml2js": {
+        "git": "https://github.com/peerlibrary/meteor-xml2js.git",
+        "tag": "v0.4.4-1",
+        "commit": "e437621620bf1821f3388f8949c8d5408f38d1fb"
+      },
+      "highcharts": {
+        "git": "https://github.com/mikeschaekermann/meteor-highcharts.git",
+        "tag": "v0.1.0",
+        "commit": "eca115ee55e1cc083e389171717760dbaa727534"
+      },
+      "moment": {
+        "git": "https://github.com/acreeger/meteor-moment.git",
+        "tag": "v2.8.1",
+        "commit": "722ea63783d594341023836b7d418ab2567dab8c"
+      },
+      "aws-sdk": {
+        "git": "https://github.com/peerlibrary/meteor-aws-sdk.git",
+        "tag": "v2.0.14-1",
+        "commit": "8f4a0ee6f8a395fb2b4a48d358520bd50b96dafa"
+      },
+      "jquery-datatables": {
+        "git": "https://github.com/lumapictures/meteor-jquery-datatables",
+        "tag": "v1.0.5",
+        "commit": "fe4fb3178386f88eeac9139b7680646b320e321d"
+      },
+      "less-bootstrap-3": {
+        "git": "https://github.com/DerMambo/less-bootstrap-3.git",
+        "tag": "v0.0.2",
+        "commit": "b5010b2ff9e9ae6b0e6e13eb0f6c81c9cb84373e"
+      },
+      "font-awesome-4-less": {
+        "git": "https://github.com/svub/fontawesome4-less.git",
+        "tag": "v4.4.0",
+        "commit": "250d2336a217c18eb70e9d074784a7db3ca38472"
+      },
+      "spin": {
+        "git": "https://github.com/SachaG/meteor-spin.git",
+        "tag": "v2.0.4",
+        "commit": "f7b1e12a7caff1283cdb3671a393c182d0ae9862"
+      },
+      "iron-router-progress": {
+        "git": "https://github.com/Multiply/iron-router-progress.git",
+        "tag": "v0.4.1",
+        "commit": "496fcda9a6ec352b4733725f60c6f280250c3541"
+      },
+      "roles": {
+        "git": "https://github.com/alanning/meteor-roles.git",
+        "tag": "v1.2.11",
+        "commit": "2d7dc91848ec874d3a0852c77f462d0fae749de5"
+      },
+      "wait-on-lib": {
+        "git": "https://github.com/DerMambo/wait-on-lib.git",
+        "tag": "v0.0.3",
+        "commit": "ee83a431019b59c341903c3f732ff3d8d038a8ce"
+      },
+      "custom-framework": {
+        "git": "https://steeeeeve:foxtrot1@github.com/dgii/meteor_custom_framework.git",
+        "branch": "master",
+        "commit": "fe2f0e073c22aed8bad781dbd09b6c79be442a70"
+      },
+      "kadira": {
+        "git": "https://github.com/meteorhacks/kadira.git",
+        "tag": "v2.4.13",
+        "commit": "1f3c1a427084af5a2eca2e299eb65bc01387df8a"
+      },
+      "security-service": {
+        "git": "https://93d92fb819fc8f3ac8f8ced8864aa0801a4141db:x-oauth-basic@github.com/dgii/meteor_security_service.git",
+        "branch": "master",
+        "commit": "495dc032025ab1fdff69042b50954f75d92ed55d"
+      },
+      "bootstrap-daterangepicker": {
+        "git": "https://github.com/BenjaminRH/meteor-bootstrap-daterangepicker.git",
+        "tag": "v0.1.0",
+        "commit": "883bcafd96aae0072fdbe596243030afdadbe3c3"
+      },
+      "simple-schema": {
+        "git": "https://github.com/aldeed/meteor-simple-schema.git",
+        "tag": "v0.7.0",
+        "commit": "77d267aec4ba8a70f677e5d9ef9fb91fb0e3f0f6"
+      },
+      "iron-layout": {
+        "git": "https://github.com/EventedMind/iron-layout.git",
+        "tag": "v0.2.0",
+        "commit": "4a2d53e35ba036b0c189c7ceca34be494d4c6c97"
+      },
+      "blocking": {
+        "git": "https://github.com/peerlibrary/meteor-blocking.git",
+        "tag": "v0.4.1",
+        "commit": "512354e9721d931c7884b56fbb3b419d060ae8da"
+      },
+      "luma-component": {
+        "git": "https://github.com/LumaPictures/meteor-luma-component",
+        "tag": "v1.0.5",
+        "commit": "9d567068048e9ca82699b096e78c3f7ec76c0fa4"
+      },
+      "async": {
+        "git": "https://github.com/peerlibrary/meteor-async.git",
+        "tag": "v0.9.0-1",
+        "commit": "419ddf9711474738cddc6fa3c086a0875be3a5d1"
+      },
+      "device-cloud": {
+        "git": "https://tharrington:Ranlou1989@github.com/dgii/meteor_device_cloud.git",
+        "branch": "master",
+        "commit": "8f560e40721a92d526f657c4eb1df1a0ff23f6b5"
+      },
+      "event-service": {
+        "git": "https://tharrington:Ranlou1989@github.com/dgii/meteor_event_service.git",
+        "branch": "master",
+        "commit": "0f8cbe40ec7b170f8809f8da9eed94c7d1f17f28"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "tag": "v0.2.5",
+        "commit": "273e3ab7d005d91a1a59c71bd224533b4dae2fbd"
+      },
+      "iron-core": {
+        "git": "https://github.com/EventedMind/iron-core.git",
+        "tag": "v0.2.0",
+        "commit": "0e48b5dc50d03f01025b7b900fb5ce2f13d52cad"
+      },
+      "iron-dynamic-template": {
+        "git": "https://github.com/EventedMind/iron-dynamic-template.git",
+        "tag": "v0.2.1",
+        "commit": "4dd1185c4d9d616c9abdb3f33e4a7d5a88db7e18"
+      }
+    }
+  }
+}

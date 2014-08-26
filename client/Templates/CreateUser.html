@@ -1,4 +1,28 @@
 <template name="CreateUser">
+
+  <h1>Users</h1>
+  <div class="col-lg-4">
+    <table id="userlist" class="table table-striped table-bordered table-condensed">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each users}}
+		    <tr class="customerrow" id="{{_id}}">
+		      <td>{{userInfo.username}}</td>
+		      <td>{{userInfo.email}}</td>
+		      <td>{{roles}}</td>
+		    </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+
+
 	<div class="col-xs-6">
 	<form class="form-horizontal">
 		<div class="form-group">
@@ -14,7 +38,7 @@
 			</div>
 		</div>
 		<div class="form-group">
-			<select style="color: #2b3e50">
+			<select id="CreateRole" style="color: #2b3e50">
 				{{#each CreateUserOptions}}}}
 					<option style="color: #2b3e50" value="{{name}}">{{name}}</option>
 				{{/each}}

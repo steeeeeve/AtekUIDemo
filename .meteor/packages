@@ -22,3 +22,5 @@ jquery-datatables
 wait-on-lib
 roles
 kadira
+security-service
+bootstrap-daterangepicker

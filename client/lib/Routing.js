@@ -13,19 +13,9 @@ Router.map(function() {
             Session.set('selectedDeviceId',this.params.id);
             console.log('Session deviceId set!');
         }
-        /*
-        action : function() {
-            if(this.ready())
-                this.render();
-        },
-        */
     });
     this.route('CreateUser',{
-        path:'/CreateUser',
-        waitOn : function() {
-            return IRLibLoader.load('https://raw.githubusercontent.com/digitalBush/jquery.maskedinput/1.3.1/dist/jquery.maskedinput.js');
-
-        }
+        path:'/CreateUser'
     });
     this.route('UserSearch',{
         path:'/UserSearch'
@@ -36,16 +26,6 @@ Router.map(function() {
             return [Meteor.subscribe('channels'),Meteor.subscribe('devices'),Meteor.subscribe('sites')];
         },
         loadingTemplate : 'loading'
-        /*onBeforeAction : function(pause) {
-            if(!Meteor.user())
-            {
-                this.render('Login');
-            }
-            else
-            {
-                Meteor.subscribe('channels').wait()
-            }
-        }*/
     });
 
     this.route('Provisioning',{
@@ -63,6 +43,12 @@ Router.map(function() {
         path : '/AdminUI',
         waitOn : function() {
             return Meteor.subscribe('gateways');
+        }
+    });
+    this.route('ReportingUI', {
+        path: 'ReportingUI',
+        waitOn: function() {
+            return IRLibLoader.load('//code.jquery.com/ui/1.11.1/jquery-ui.js');
         }
     });
     this.route('Login', {path:'/'});

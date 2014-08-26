@@ -1,0 +1,67 @@
+<template name="ReportingUI">
+	<form>
+		<div class="form-group">
+			<label for="reportOption">Reports </label>
+			<select id="reportOption" style="color: #2b3e50">
+				{{#each reportOptions}}}}
+					<option style="color: #2b3e50" value="{{name}}">{{name}}</option>
+				{{/each}}
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="reportOption">Locations </label>
+			<select id="reportOption" style="color: #2b3e50">
+				{{#each locationsOptions}}}}
+					<option style="color: #2b3e50" value="{{info.name}}">{{info.name}}</option>
+				{{/each}}
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="reportOption">Assets </label>
+			<select id="reportOption" style="color: #2b3e50">
+				{{#each assetOptions}}}}
+					<option style="color: #2b3e50" value="{{name}}">{{name}}</option>
+				{{/each}}
+			</select>
+		</div>		
+		<br/>
+
+		<p>Select Date</p>
+		<div id="dateRangePickDiv" class="col-md-6">
+			<a id="1D" class="link">1D</a>
+			<a id="2D" class="link">2D</a>
+			<a id="7D" class="link">7D</a>
+			<a id="1M" class="link">1M</a>
+			<a id="3M" class="link">3M</a>
+			<a id="6M" class="link">6M</a>
+			<a id="9M" class="link">9M</a>
+			<a id="1Y" class="link">1Y</a>
+		</div>	<br/>
+		<label for="datepickerStart">Start Date : </label><input type="text" id="datepickerStart"><br/>	
+		<label for="datepickerEnd">End Date : </label><input type="text" id="datepickerEnd"><br/>
+		<button id="showReport" style="color: #2b3e50" class="btn-default">Show Report </button>
+
+		<button onclick="return ExcellentExport.csv(this,'customerTableData');" id="downloadReport" style="color: #2b3e50" class="btn-default">Download Report </button>
+	</form>
+
+	<hr/>
+    <table id="customerTableData" class="hide table table-striped table-bordered table-condensed">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Sites Ids</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each Customers}}
+		    <tr class="customerrow" id="{{_id}}">
+		      <td>{{info.name}}</td>
+		      <td>{{description}}</td>
+		      <td>{{sites}}</td>
+		    </tr>
+        {{/each}}
+      </tbody>
+    </table>
+
+</template>
