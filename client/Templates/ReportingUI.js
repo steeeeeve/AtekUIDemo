@@ -37,8 +37,7 @@ Template.ReportingUI.events({
 		}
 	},
 	'click #downloadReport' : function(event) {
-		//ExcellentExport.csv($('#customerTableData'),'')
-		/*
+
 		var reportOptions = $('#reportOption').val();
 		var json;
 		if(reportOptions == 'Locations List')
@@ -47,12 +46,13 @@ Template.ReportingUI.events({
 			json = Customers.find().fetch();
 		var csv = JSON2CSV(json);
     	window.open("data:text/csv;charset=utf-8," + escape(csv))
-    	*/
 	}
 })
 
 Template.ReportingUI.rendered = function() {
-	$('#datepicker').datepicker();
+	$('#datepickerStart').datepicker();
+	$('#datepickerEnd').datepicker();
+
 }
 
 
